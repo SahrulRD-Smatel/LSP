@@ -1,0 +1,79 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_Admin_Provinsi
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Edit</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.ID)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NamaLengkap, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NamaLengkap, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NamaLengkap, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card-footer">
+            @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-success" })
+            <input type="submit" value="Save" class="btn btn-primary float-right" />
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+
+    </div>
+
+}
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="/Home">Home</a></li><li class="breadcrumb-item"><a href="../">Data Admin Provinsi</a></li><li class="breadcrumb-item active">Edit Data</li></ol >');
+        $("#dashbordMain").html("Edit Data");
+
+        ADMenuPropinsi('mnuAdminProvinsi');
+    });
+
+</script>
+

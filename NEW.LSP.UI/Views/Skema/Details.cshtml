@@ -1,0 +1,74 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_Skema
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Details</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2" style="font-weight: bold;">
+                    @Html.DisplayNameFor(model => model.Kode_KK)
+                    <hr />
+                </div>
+                <div class="col-1 text-center">
+                    :
+                </div>
+                <div class="col-9">
+                    @Html.DisplayFor(model => model.Kode_KK)&nbsp;
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2" style="font-weight: bold;">
+                    @Html.DisplayNameFor(model => model.Kode_Skema)
+                    <hr />
+                </div>
+                <div class="col-1 text-center">
+                    :
+                </div>
+                <div class="col-9">
+                    @Html.DisplayFor(model => model.Kode_Skema)&nbsp;
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2" style="font-weight: bold;">
+                    @Html.DisplayNameFor(model => model.Skema)
+                    <hr />
+                </div>
+                <div class="col-1 text-center">
+                    :
+                </div>
+                <div class="col-9">
+                    @Html.DisplayFor(model => model.Skema)&nbsp;
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            @Html.ActionLink("BACK", "Index", "Skema", new { area = "" }, new { @class = "btn btn-primary" })
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="/Home">Home</a></li><li class="breadcrumb-item"><a href="../">Data Skema</a></li><li class="breadcrumb-item active">Detail Data</li></ol >');
+        $("#dashbordMain").html("Detail Data");
+
+        ADMenuPropinsi('mnuSkema');
+    });
+</script>
+

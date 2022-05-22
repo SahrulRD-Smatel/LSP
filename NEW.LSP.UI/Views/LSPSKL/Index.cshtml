@@ -1,0 +1,137 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_LSP_cstm
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ if (Model.NPSN == null)
+    {
+        <p>Anda tidak memiliki LSP</p>
+    }
+    else
+    {
+        <div>
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">&nbsp;</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.Nomer_Lisensi)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @Html.DisplayFor(model => model.Nomer_Lisensi)&nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.NPSN)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @Html.DisplayFor(model => model.NPSN)&nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.Nama_Sekolah)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @Html.DisplayFor(model => model.Nama_Sekolah)&nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.NamaKabupaten)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @Html.DisplayFor(model => model.NamaKabupaten)&nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.Status_LSP)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @Html.DisplayFor(model => model.Status_LSP)&nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2" style="font-weight: bold;">
+                            @Html.DisplayNameFor(model => model.Berlaku_Sampai)
+                            <hr />
+                        </div>
+                        <div class="col-1 text-center">
+                            :
+                        </div>
+                        <div class="col-9">
+                            @*@Html.DisplayFor(model => model.Berlaku_Sampai.ToString())&nbsp;*@
+
+                            @if (@Model.Berlaku_Sampai != null)
+                            {@Model.Berlaku_Sampai.Value.ToString("dd/MMM/yyyy")}
+                        else
+                        {@Html.DisplayFor(Model => Model.Berlaku_Sampai)}
+                            &nbsp;
+                            <hr />
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="card-footer">
+                    @Html.ActionLink("Ubah", "Edit", new { id = Model.Nomer_Lisensi }, new { @class = "btn btn-primary" })
+                    <div class=" float-right">
+                        <b>Creator:</b> @Html.DisplayFor(model => model.creator) &nbsp;-&nbsp; @if (@Model.created != null)
+                        {@Model.created.Value.ToString("dd/MMM/yyyy HH:mm")},&nbsp;<b>Editor:</b> @Html.DisplayFor(model => model.editor)&nbsp;-&nbsp; @if (@Model.edited != null)
+                        {@Model.edited.Value.ToString("dd/MMM/yyyy HH:mm")}
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="../HomeSKL">Home</a></li><li class="breadcrumb-item active">All Data</li></ol >');
+        $("#dashbordMain").html("");
+
+        ADMenuSekolah('mnuLSPSKL');
+    });
+
+</script>

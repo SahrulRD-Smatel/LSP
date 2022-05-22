@@ -1,0 +1,77 @@
+﻿@model IEnumerable<NEW.LSP.Dto.Tb_Tahun_Pelajaran>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("Add New", "Create", new { area = "" }, new { @class = "btn btn-primary" })
+</p>
+
+<table id="example1" class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th>
+                Tahun Pelajaran
+                @*@Html.DisplayNameFor(model => model.Tahun_pelajaran)*@
+            </th>
+            <th style="text-align:center" width="200px">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tahun_pelajaran)
+                </td>
+                <td style="text-align:center">
+                    @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "fas fa-edit" }) &nbsp;&nbsp;| &nbsp;&nbsp;
+                    @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "fas fa-search" })&nbsp;&nbsp;| &nbsp;&nbsp;
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.Nomer_Lisensi })*@
+                    <a href="#">
+                        <span onclick="deleteConfirm('@item.ID', '@item.Tahun_pelajaran');">
+                            <i class="fa fa-trash" data-toggle="modal" data-target="#modal-primary"></i>
+                        </span>
+                    </a>
+
+
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.Tahun_pelajaran })  <i class="nav-icon fas fa-edit "></i> |
+                        @Html.ActionLink("Details", "Details", new { id = item.Tahun_pelajaran }) <i class="nav-icon fas fa-search"></i> |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Tahun_pelajaran }) <i class="nav-icon fas fa-delete"></i>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="../Home">Home</a></li><li class="breadcrumb-item active">All Data</li></ol >');
+        $("#dashbordMain").html("Data Tahun Pelajaran");
+
+        ADMenuPropinsi('mnuTahunPelajaran');
+
+    });
+
+    function deleteConfirm(id, nama) {
+        $("#addMsg1").text("ID : " + id);
+        $("#addMsg2").text("Tahun Pelajaran : " + nama);
+        $("#noID").text(id);
+    }
+
+    function deleteOK() {
+        var id = $("#noID").text();
+        var ss = 'TahunPelajaran/Delete/' + id;
+        window.location.href = ss;
+    }
+</script>
+

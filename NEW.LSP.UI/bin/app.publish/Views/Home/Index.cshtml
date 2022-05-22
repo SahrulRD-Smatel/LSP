@@ -1,0 +1,283 @@
+﻿
+@model Tuple<NEW.LSP.UI.Models.m_Tb_Home, List<NEW.LSP.Dto.Custom.Tb_Approval_KKTerlisensi_cstm>, List<NEW.LSP.Dto.Tb_Pengumuman>>
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#kkterlisensi" role="tab" aria-controls="kkterlisensi" aria-selected="false">Approval KK Terlisensi</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#jejaring" role="tab" aria-controls="jejaring" aria-selected="false">Approval Jejaring</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent" style="padding:10px">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#6c757d"></rect>
+                                <text x="40%" y="50%" fill="#dee2e6" dy=".3em" id="txtJmlSMK" style="font-size: 2.5em;">@Html.DisplayFor(model => model.Item1.jmlSMK)</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <br /><br />
+                                @Html.LabelFor(model => model.Item1.jmlSMK, htmlAttributes: new { @class = "card-title" })
+                                @*<h5 class="card-title">Jumlah SMK</h5>*@
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#6c757d"></rect>
+                                <text x="40%" y="50%" fill="#dee2e6" dy=".3em" style="font-size: 2.5em;" id="txtJmlA">@Html.DisplayFor(model => model.Item1.jmlAsesor)</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <br /><br />
+                                @Html.LabelFor(model => model.Item1.jmlAsesor, htmlAttributes: new { @class = "card-title" })
+                                @*<h5 class="card-title">Jumlah Asesor</h5>*@
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#6c757d"></rect>
+                                <text x="40%" y="50%" fill="#dee2e6" dy=".3em" id="txtJmlLSP" style="font-size: 2.5em;">@Html.DisplayFor(model => model.Item1.jmlLSP)</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <br /><br />
+                                @Html.LabelFor(model => model.Item1.jmlLSP, htmlAttributes: new { @class = "card-title" })
+                                @*<h5 class="card-title">Jumlah LSP</h5>*@
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#6c757d"></rect>
+                                <text x="40%" y="50%" fill="#dee2e6" dy=".3em" id="txtJmlKKT" style="font-size: 2.5em;">@Html.DisplayFor(model => model.Item1.jmlKKT)</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <br /><br />
+                                @Html.LabelFor(model => model.Item1.jmlKKT, htmlAttributes: new { @class = "card-title" })
+                                @*<h5 class="card-title">Jumlah Kompetensi Keahlian Terlisensi</h5>*@
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#6c757d"></rect>
+                                <text x="40%" y="50%" fill="#dee2e6" dy=".3em" id="txtJmlPS" style="font-size: 2.5em;">@Html.DisplayFor(model => model.Item1.jmlPS)</text>
+                            </svg>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <br /><br />
+                                @Html.LabelFor(model => model.Item1.jmlPS, htmlAttributes: new { @class = "card-title" })
+                                @*<h5 class="card-title">Jumlah Penerima Sertifikat</h5>*@
+                                <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+
+
+        @*<style>
+            .servicessssss {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                margin-top: 200px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 30px;
+                color: #5f5f5f;
+            }
+        </style>*@
+
+        @*<div>
+            <p class="servicessssss">
+                BERITA TERBARU
+            </p>
+        </div>
+        <br />
+
+        <div class="container">
+
+            <div class="row" style="display: flex; flex-wrap: wrap">
+
+                @foreach (var item in Model.Item3)
+                {
+                    <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up">
+
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <span>
+                                    <i class="glyph-icon icon-user"></i>
+                                    <a href="#" title="">
+                                        @if (item.creator != null)
+                                        {@item.creator }
+                                    else
+                                    { @item.editor}
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title; text-center; font-weight-bold">@item.judul</h5>
+                                <p class="card-text">@item.isi</p>
+
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span>
+                                    <i class="glyph-icon icon-clock-o"></i>
+                                    @if (item.edited != null)
+                                    {@item.edited.Value.ToString("dd/MMM/yyyy");
+                                }
+                                else
+                                { @item.created.Value.ToString("dd/MMM/yyyy");
+                            }
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                }
+
+
+            </div>
+        </div>*@
+
+
+    </div>
+    <div class="tab-pane fade" id="kkterlisensi" role="tabpanel" aria-labelledby="kkterlisensi-tab">
+
+        <table id="tblAPPKK" class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th style="text-align:center">NPSN</th>
+                    <th style="text-align:center">Nama Sekolah</th>
+                    <th style="text-align:center">Kabupaten</th>
+                    <th style="text-align:center">Nama KK</th>
+                    <th style="text-align:center">File Attachment</th>
+                    <th style="text-align:center">Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.Item2)
+                {
+                    <tr>
+                        <td>
+                            @item.NPSN
+                        </td>
+                        <td>
+                            @item.Nama_Sekolah
+                        </td>
+                        <td>
+                            @item.NamaKabupaten
+                        </td>
+                        <td>
+                            @item.Nama_KK
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td style="text-align:center">
+                            <a href="#">
+                                <span onclick="approveConfirm('@item.id_app', '@item.Nama_Sekolah','@item.Nama_KK');">
+                                    <i class="fa fa-check" data-toggle="modal" data-target="#modal-approve">Approve</i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+    <div class="tab-pane fade" id="jejaring" role="tabpanel" aria-labelledby="jejaring-tab">...</div>
+
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#tblAPPKK").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]]
+
+        }).buttons().container().appendTo('#tblAPPKK_wrapper .col-md-6:eq(0)');
+    });
+
+    function approveConfirm(id, a, b) {
+        $("#addMsg11").text("Nama Sekolah : " + a);
+        $("#addMsg21").text("Kompetensi Keahlian : " + b);
+        $("#noID1").text(id);
+    }
+
+    function approveOK() {
+        var id = $("#noID1").text();
+        var ss = 'Home/Approve/' + id;
+        window.location.href = ss;
+    }
+</script>

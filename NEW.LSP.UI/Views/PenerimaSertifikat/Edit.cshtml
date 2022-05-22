@@ -1,0 +1,117 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_Penerima_Sertifikat_cstm
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Edit</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group" hidden="hidden">
+                    @Html.LabelFor(model => model.Kode_Penerima_Sertifikat, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Kode_Penerima_Sertifikat, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Kode_Penerima_Sertifikat, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nomer_Lisensi, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nomer_Lisensi, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                        @Html.ValidationMessageFor(model => model.Nomer_Lisensi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NPSN, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NPSN, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                        @Html.ValidationMessageFor(model => model.NPSN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nama_Sekolah, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nama_Sekolah, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                        @Html.ValidationMessageFor(model => model.Nama_Sekolah, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NamaKabupaten, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NamaKabupaten, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                        @Html.ValidationMessageFor(model => model.NamaKabupaten, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Kode_KK, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.Kode_KK, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(model => model.Kode_KK, ViewBag.Kode_KKList as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @Html.ValidationMessageFor(model => model.Kode_KK, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Kode_Skema, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.Kode_KK, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(model => model.Kode_Skema, ViewBag.SkemaList as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @Html.ValidationMessageFor(model => model.Kode_Skema, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IDTahun_pelajaran, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.IDTahun_pelajaran, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(model => model.IDTahun_pelajaran, ViewBag.thnPelajaranList as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @Html.ValidationMessageFor(model => model.IDTahun_pelajaran, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Jumlah_penerima_sertifikat, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Jumlah_penerima_sertifikat, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Jumlah_penerima_sertifikat, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-success" })
+                <input type="submit" value="Save" class="btn btn-primary float-right" />
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+            </div>
+        </div>
+    </div>
+
+}
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="/Home">Home</a></li><li class="breadcrumb-item"><a href="../">Data Penerima Sertifikat</a></li><li class="breadcrumb-item active">Edit Data</li></ol >');
+        $("#dashbordMain").html("Edit Data");
+
+        ADMenuPropinsi('mnuPSertifikat');
+    });
+</script>
+
+

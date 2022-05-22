@@ -1,0 +1,90 @@
+﻿@model IEnumerable<NEW.LSP.Dto.Custom.Tb_Data_Asesor_cstm>
+
+@{ ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+
+<p>
+    @Html.ActionLink("Add New", "Create", new { area = "" }, new { @class = "btn btn-primary" })
+</p>
+
+<table id="example1" class="table table-bordered table-striped table-hover">
+
+    <thead>
+        <tr>
+            <th style="text-align:center">
+                Nama Sekolah
+            </th>
+            <th style="text-align:center">
+                Kabupaten
+            </th>
+            <th style="text-align:center">
+                Nama Asesor
+            </th>
+            <th style="text-align:center">
+                MET (LISENSI BNSP)
+            </th>
+            <th style="text-align:center">
+                Kompetensi Keahlian
+            </th>
+            <th style="text-align:center">Aksi</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nama_Sekolah)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NamaKabupaten)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nama_Asesor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.No_Reg_Met)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nama_KK)
+    </td>
+    <td style="text-align:center">
+        @Html.ActionLink("   ", "Edit", new { id = item.id_asesor }, new { @class = "fas fa-edit" }) &nbsp;&nbsp;| &nbsp;&nbsp;
+        @Html.ActionLink("   ", "Details", new { id = item.id_asesor }, new { @class = "fas fa-search" }) &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">
+            <span onclick="deleteConfirm('@item.id_asesor', '@item.No_Reg_Met', '@item.Nama_Asesor','@item.Nama_Sekolah');">
+                <i class="fa fa-trash" data-toggle="modal" data-target="#modal-primary"></i>
+            </span>
+        </a>
+    </td>
+</tr>}
+    </tbody>
+</table>
+
+<script>$(document).ready(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="../Home">Home</a></li><li class="breadcrumb-item active">All Data</li></ol >');
+        $("#dashbordMain").html("Data Asesor");
+
+        ADMenuPropinsi('mnuDataAsesor');
+    });
+
+    function deleteConfirm(id, a, b, c) {
+        $("#addMsg1").text("Nama Asesor : " + b);
+        $("#addMsg2").text(" MET (LISENSI BNSP) : " + a);
+        $("#noID").text(id);
+    }
+
+    function deleteOK() {
+        var id = $("#noID").text();
+        var ss = 'DataAsesor/Delete/' + id;
+        window.location.href = ss;
+    }</script>

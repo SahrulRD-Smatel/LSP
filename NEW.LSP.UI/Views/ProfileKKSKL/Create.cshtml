@@ -1,0 +1,88 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_SMK_Kompetensi_Keahlian_cstm
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Add New</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NPSN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NPSN, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+                        @*@Html.DropDownListFor(model => model.NPSN, ViewBag.dataSMK as SelectList, new { @class = "form-control form-control-chosen-required" })*@
+                        @Html.ValidationMessageFor(model => model.NPSN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.Nama_Sekolah, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nama_Sekolah, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nama_Sekolah, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Kode_KK, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Kode_KK, ViewBag.Kode_KKList as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @*@Html.EditorFor(model => model.Kode_KK, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.Kode_KK, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.Nama_KK, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nama_KK, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nama_KK, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+            </div>
+        </div>
+        <div class="card-footer">
+            @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-success" })
+            <input type="submit" value="Save" class="btn btn-primary float-right" />
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="/HomeSKL">Home</a></li><li class="breadcrumb-item"><a href="../SMKKK">Data SMK Kompetensi Keahlian</a></li><li class="breadcrumb-item active">Edit Data</li></ol >');
+        $("#dashbordMain").html("Add Data");
+
+        ADMenuSekolah('mnuProfileKKSKL');
+    });
+
+    //$('#Nomer_Lisensi').on("change", function () {
+    //    var NomerLisensi = $('#Nomer_Lisensi').val();
+    //    var obj = { NomerLisensi: NomerLisensi };
+    //    AjaxCall('/LSP/GetLSP', JSON.stringify(obj), 'POST').done(function (response) {
+    //        if (response.length > 0) {
+    //            var tt = jQuery.parseJSON(response);
+    //            $("#NPSN").val(tt[0].NPSN);
+    //            $("#NamaKabupaten").val(tt[0].NamaKabupaten);
+    //        }
+    //    }).fail(function (error) {
+    //        alert(error.StatusText);
+    //    });
+    //});
+</script>
+

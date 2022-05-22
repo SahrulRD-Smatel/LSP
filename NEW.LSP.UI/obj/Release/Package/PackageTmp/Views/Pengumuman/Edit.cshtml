@@ -1,0 +1,92 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_Pengumuman
+
+@{
+    ViewBag.Title = "Penumuman";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@*@using (Html.BeginForm())*@
+@using (Html.BeginForm("Edit", "Pengumuman", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Edit</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.no, "Nomor", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.no, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.no, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.tanggal, "Tanggal", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.NPSN, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.EditorFor(model => model.tanggal, new { htmlAttributes = new { @class = "form-control datepicker", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.tanggal, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.tanggal_hingga, "Berlaku Hingga", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.tanggal_hingga, new { htmlAttributes = new { @class = "form-control datepicker", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.tanggal_hingga, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.judul, "Judul", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.judul, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.judul, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.isi, "Isi", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.Status_LSP, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.TextAreaFor(model => model.isi, new { @class = "form-control", @rows = "5" })
+                        @Html.ValidationMessageFor(model => model.isi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.picture, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.picture, new { htmlAttributes = new { @class = "form-control-file", type = "file", accept = "image/*" } })
+                        @Html.ValidationMessageFor(model => model.picture, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-success" })
+                <input type="submit" value="Save" class="btn btn-primary float-right" />
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+            </div>
+        </div>
+    </div>
+
+}
+
+<script>
+    $(document).ready(function () {
+        ADMenuPropinsi('mnuPengumuman');
+    });
+
+</script>

@@ -1,0 +1,111 @@
+﻿@model NEW.LSP.UI.Models.m_Tb_Data_Asesor_cstm
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Add New</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.No_Reg_Met, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.No_Reg_Met, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.No_Reg_Met, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nama_Asesor, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nama_Asesor, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.Nama_Asesor, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NPSN, "Nama Sekolah", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.NPSN, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(model => model.NPSN, ViewBag.dataSMK as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @Html.ValidationMessageFor(model => model.NPSN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NamaKabupaten, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NamaKabupaten, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        @Html.ValidationMessageFor(model => model.NamaKabupaten, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Kode_KK, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.Kode_KK_Terlisensi, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(model => model.Kode_KK, ViewBag.Kode_KKList as SelectList, new { @class = "form-control form-control-chosen-required" })
+                        @Html.ValidationMessageFor(model => model.Kode_KK, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Tanggal_Sertifikat_Asesor, htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Tanggal_Sertifikat_Asesor, new { htmlAttributes = new { @class = "form-control datepicker", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.Tanggal_Sertifikat_Asesor, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-success" })
+            <input type="submit" value="Save" class="btn btn-primary float-right" />
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+    </div>
+}
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="/Home">Home</a></li><li class="breadcrumb-item"><a href="../DataAsesor">Data Asesor</a></li><li class="breadcrumb-item active">Add Data</li></ol >');
+        $("#dashbordMain").html("Add Data");
+
+        ADMenuSekolah('mnuDataAsesorSKL');
+
+    });
+
+
+    $('#NPSN').on("change", function () {
+        var NPSN = $('#NPSN').val();
+        var obj = { NPSN: NPSN };
+        AjaxCall('/SMK/GetSMK', JSON.stringify(obj), 'POST').done(function (response) {
+            if (response.length > 0) {
+                var tt = jQuery.parseJSON(response);
+                $("#NamaKabupaten").val(tt.NamaKabupaten);
+            }
+        }).fail(function (error) {
+            alert(error.StatusText);
+        });
+    });
+
+</script>
+

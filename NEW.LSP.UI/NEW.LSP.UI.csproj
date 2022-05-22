@@ -1,0 +1,344 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AECD9813-18B1-4620-9777-88BECD75A162}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEW.LSP.UI</RootNamespace>
+    <AssemblyName>NEW.LSP.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DBHelper">
+      <HintPath>..\..\SMK.BAWANG.UI\packages\DBHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Andrik\LSP\LSP\packages\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\service-details-1.jpg" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\SMK\Index.cshtml" />
+    <Content Include="Views\SMK\Details.cshtml" />
+    <Content Include="Views\SMK\Create.cshtml" />
+    <Content Include="Views\SMK\Edit.cshtml" />
+    <Content Include="Views\SMKKK\Index.cshtml" />
+    <Content Include="Views\SMKKK\Details.cshtml" />
+    <Content Include="Views\SMKKK\Create.cshtml" />
+    <Content Include="Views\SMKKK\Edit.cshtml" />
+    <Content Include="Views\LSP\Index.cshtml" />
+    <Content Include="Views\LSP\Details.cshtml" />
+    <Content Include="Views\LSP\Create.cshtml" />
+    <Content Include="Views\LSP\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ADProvinsiController.cs" />
+    <Compile Include="Controllers\ADSekolahController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DataAsesorController.cs" />
+    <Compile Include="Controllers\DataAsesorSKLController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeSKLController.cs" />
+    <Compile Include="Controllers\JejaringController.cs" />
+    <Compile Include="Controllers\JejaringSKLController.cs" />
+    <Compile Include="Controllers\KKeahlianController.cs" />
+    <Compile Include="Controllers\KKTerlisensiController.cs" />
+    <Compile Include="Controllers\KKTerlisensiSKLController.cs" />
+    <Compile Include="Controllers\LOGINController.cs" />
+    <Compile Include="Controllers\LSPController.cs" />
+    <Compile Include="Controllers\LSPSKLController.cs" />
+    <Compile Include="Controllers\PenerimaSertifikatController.cs" />
+    <Compile Include="Controllers\PenerimaSertifikatSKLController.cs" />
+    <Compile Include="Controllers\PengumumanController.cs" />
+    <Compile Include="Controllers\PengumumanSKLController.cs" />
+    <Compile Include="Controllers\ProfileKKSKLController.cs" />
+    <Compile Include="Controllers\ProfileSKLController.cs" />
+    <Compile Include="Controllers\SkemaController.cs" />
+    <Compile Include="Controllers\SMKController.cs" />
+    <Compile Include="Controllers\SMKKKController.cs" />
+    <Compile Include="Controllers\TahunPelajaranController.cs" />
+    <Compile Include="Controllers\UbahPassSKLController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper_Code\AllowFileSizeAttribute.cs" />
+    <Compile Include="Models\m_Tb_Admin_Provinsi.cs" />
+    <Compile Include="Models\m_Tb_Admin_Sekolah.cs" />
+    <Compile Include="Models\m_Tb_Admin_Sekolah_cstm.cs" />
+    <Compile Include="Models\m_Tb_Approval_KKTerlisensi.cs" />
+    <Compile Include="Models\m_Tb_Data_Asesor.cs" />
+    <Compile Include="Models\m_Tb_Data_Asesor_cstm.cs" />
+    <Compile Include="Models\m_Tb_Home.cs" />
+    <Compile Include="Models\m_Tb_Jejaring.cs" />
+    <Compile Include="Models\m_Tb_Jejaring_cstm.cs" />
+    <Compile Include="Models\m_Tb_Kabupaten.cs" />
+    <Compile Include="Models\m_Tb_Kompetensi_Keahlian.cs" />
+    <Compile Include="Models\m_Tb_Kompetensi_Keahlian_Terlisensi.cs" />
+    <Compile Include="Models\m_Tb_Kompetensi_Keahlian_Terlisensi_cstm.cs" />
+    <Compile Include="Models\m_Tb_LSP.cs" />
+    <Compile Include="Models\m_Tb_LSP_cstm.cs" />
+    <Compile Include="Models\m_Tb_Penerima_Sertifikat.cs" />
+    <Compile Include="Models\m_Tb_Penerima_Sertifikat_cstm.cs" />
+    <Compile Include="Models\m_Tb_Pengumuman.cs" />
+    <Compile Include="Models\m_Tb_Skema.cs" />
+    <Compile Include="Models\m_Tb_SMK.cs" />
+    <Compile Include="Models\m_Tb_SMK_cstm.cs" />
+    <Compile Include="Models\m_Tb_SMK_Kompetensi_Keahlian.cs" />
+    <Compile Include="Models\m_Tb_SMK_Kompetensi_Keahlian_cstm.cs" />
+    <Compile Include="Models\m_Tb_Tahun_Pelajaran.cs" />
+    <Compile Include="Models\m_v_Login.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_MenuSharedProp.cshtml" />
+    <Content Include="Views\Shared\_MenuSharedSkl.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\KKTerlisensi\Index.cshtml" />
+    <Content Include="Views\KKTerlisensi\Details.cshtml" />
+    <Content Include="Views\KKTerlisensi\Create.cshtml" />
+    <Content Include="Views\KKTerlisensi\Edit.cshtml" />
+    <Content Include="Views\PenerimaSertifikat\Index.cshtml" />
+    <Content Include="Views\PenerimaSertifikat\Details.cshtml" />
+    <Content Include="Views\PenerimaSertifikat\Create.cshtml" />
+    <Content Include="Views\PenerimaSertifikat\Edit.cshtml" />
+    <Content Include="Views\Jejaring\Index.cshtml" />
+    <Content Include="Views\Jejaring\Details.cshtml" />
+    <Content Include="Views\Jejaring\Create.cshtml" />
+    <Content Include="Views\Jejaring\Edit.cshtml" />
+    <Content Include="Views\KKeahlian\Index.cshtml" />
+    <Content Include="Views\KKeahlian\Details.cshtml" />
+    <Content Include="Views\KKeahlian\Create.cshtml" />
+    <Content Include="Views\KKeahlian\Edit.cshtml" />
+    <Content Include="Views\TahunPelajaran\Index.cshtml" />
+    <Content Include="Views\TahunPelajaran\Details.cshtml" />
+    <Content Include="Views\TahunPelajaran\Create.cshtml" />
+    <Content Include="Views\TahunPelajaran\Edit.cshtml" />
+    <Content Include="Views\ADProvinsi\Index.cshtml" />
+    <Content Include="Views\ADProvinsi\Details.cshtml" />
+    <Content Include="Views\ADProvinsi\Create.cshtml" />
+    <Content Include="Views\ADProvinsi\Edit.cshtml" />
+    <Content Include="Views\ADSekolah\Index.cshtml" />
+    <Content Include="Views\ADSekolah\Details.cshtml" />
+    <Content Include="Views\ADSekolah\Create.cshtml" />
+    <Content Include="Views\ADSekolah\Edit.cshtml" />
+    <Content Include="Views\LOGIN\Index.cshtml" />
+    <Content Include="Views\HomeSKL\Index.cshtml" />
+    <Content Include="Views\ProfileSKL\Index.cshtml" />
+    <Content Include="Views\ProfileSKL\Edit.cshtml" />
+    <Content Include="Views\ProfileKKSKL\Index.cshtml" />
+    <Content Include="Views\ProfileKKSKL\Details.cshtml" />
+    <Content Include="Views\ProfileKKSKL\Create.cshtml" />
+    <Content Include="Views\ProfileKKSKL\Edit.cshtml" />
+    <Content Include="Views\LSPSKL\Index.cshtml" />
+    <Content Include="Views\LSPSKL\Edit.cshtml" />
+    <Content Include="Views\KKTerlisensiSKL\Index.cshtml" />
+    <Content Include="Views\KKTerlisensiSKL\Details.cshtml" />
+    <Content Include="Views\KKTerlisensiSKL\Create.cshtml" />
+    <Content Include="Views\KKTerlisensiSKL\Edit.cshtml" />
+    <Content Include="Views\PenerimaSertifikatSKL\Index.cshtml" />
+    <Content Include="Views\PenerimaSertifikatSKL\Details.cshtml" />
+    <Content Include="Views\PenerimaSertifikatSKL\Create.cshtml" />
+    <Content Include="Views\PenerimaSertifikatSKL\Edit.cshtml" />
+    <Content Include="Views\JejaringSKL\Index.cshtml" />
+    <Content Include="Views\JejaringSKL\Details.cshtml" />
+    <Content Include="Views\JejaringSKL\Create.cshtml" />
+    <Content Include="Views\JejaringSKL\Edit.cshtml" />
+    <Content Include="Views\UbahPassSKL\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Pengumuman\Index.cshtml" />
+    <Content Include="Views\Pengumuman\Create.cshtml" />
+    <Content Include="Views\Pengumuman\Details.cshtml" />
+    <Content Include="Views\Pengumuman\Edit.cshtml" />
+    <Content Include="Views\PengumumanSKL\Index.cshtml" />
+    <Content Include="Views\PengumumanSKL\Details.cshtml" />
+    <Content Include="Views\DataAsesor\Index.cshtml" />
+    <Content Include="Views\DataAsesor\Details.cshtml" />
+    <Content Include="Views\DataAsesor\Create.cshtml" />
+    <Content Include="Views\DataAsesor\Edit.cshtml" />
+    <Content Include="Views\Skema\Index.cshtml" />
+    <Content Include="Views\Skema\Details.cshtml" />
+    <Content Include="Views\Skema\Create.cshtml" />
+    <Content Include="Views\Skema\Edit.cshtml" />
+    <Content Include="Views\DataAsesorSKL\Index.cshtml" />
+    <Content Include="Views\DataAsesorSKL\Edit.cshtml" />
+    <Content Include="Views\DataAsesorSKL\Details.cshtml" />
+    <Content Include="Views\DataAsesorSKL\Create.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NEW.LSP.Dta\NEW.LSP.Dta.csproj">
+      <Project>{7c237f16-b0ae-4543-aeca-8dbbc967158a}</Project>
+      <Name>NEW.LSP.Dta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NEW.LSP.Dto\NEW.LSP.Dto.csproj">
+      <Project>{72b9555b-86f3-4678-a4ca-29076167933c}</Project>
+      <Name>NEW.LSP.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NEW.LSP.Logic\NEW.LSP.Logic.csproj">
+      <Project>{0d776e23-27ae-4f6a-be02-3b1bd42da2e5}</Project>
+      <Name>NEW.LSP.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63991</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63991/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

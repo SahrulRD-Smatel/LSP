@@ -1,0 +1,103 @@
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.pdb
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\DBHelper.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\MySql.Data.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.pdb
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.pdb
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.AssemblyReference.cache
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CoreCompileInputs.cache
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CopyComplete
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.pdb
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.pdb
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\DBHelper.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\MySql.Data.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.pdb
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.pdb
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csprojAssemblyReference.cache
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CoreCompileInputs.cache
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CopyComplete
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\DBHelper.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\MySql.Data.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csprojAssemblyReference.cache
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CoreCompileInputs.cache
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CopyComplete
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Logic.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\DBHelper.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dta.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\NEW.LSP.Dto.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Helpers.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Mvc.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.Razor.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\bin\Debug\System.Web.WebPages.Razor.xml
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.AssemblyReference.cache
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CoreCompileInputs.cache
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.csproj.CopyComplete
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Logic\obj\Debug\NEW.LSP.Logic.pdb

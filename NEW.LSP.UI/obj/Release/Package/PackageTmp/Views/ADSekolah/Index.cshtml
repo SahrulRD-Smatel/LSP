@@ -1,0 +1,79 @@
+﻿@model IEnumerable<NEW.LSP.Dto.Tb_Admin_Sekolah>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Add New", "Create", new { area = "" }, new { @class = "btn btn-primary" })
+</p>
+
+<table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.NPSN)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th style="text-align:center">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NPSN)
+                </td>
+                <td>
+                    ********
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td style="text-align:center">
+                    @Html.ActionLink("   ", "Edit", new { id = item.ID }, new { @class = "fas fa-edit" }) &nbsp;&nbsp;| &nbsp;&nbsp;
+                    @Html.ActionLink("   ", "Details", new { id = item.ID }, new { @class = "fas fa-search" }) &nbsp;&nbsp;|&nbsp;&nbsp;
+                    @*@Html.ActionLink("   ", "Delete", new { id = item.NPSN }, new { @class = "fa fa-trash", onclick = "deleteConfirm(" + @item.NPSN + ");" })*@
+                    <a href="#">
+                        <span onclick="deleteConfirm('@item.ID','@item.NPSN','@item.Username');">
+                            <i class="fa fa-trash" data-toggle="modal" data-target="#modal-primary"></i>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="../Home">Home</a></li><li class="breadcrumb-item active">All Data</li></ol >');
+        $("#dashbordMain").html("Data Admin Sekolah");
+
+        ADMenuPropinsi('mnuAdminSekolah');
+    });
+    function deleteConfirm(id, a, b) {
+        $("#addMsg1").text("NPSN : " + a);
+        $("#addMsg2").text("Username : " + b);
+        $("#noID").text(id);
+    }
+
+    function deleteOK() {
+        var id = $("#noID").text();
+        var ss = 'ADSekolah/Delete/' + id;
+        window.location.href = ss;
+    }
+</script>
+

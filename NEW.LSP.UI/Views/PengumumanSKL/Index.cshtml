@@ -1,0 +1,96 @@
+﻿@model IEnumerable<NEW.LSP.Dto.Tb_Pengumuman>
+
+@{
+    ViewBag.Title = "Pengumuman";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<table id="example1" class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th style="text-align:center">Nomor</th>
+            @*<th style="text-align:center">NPSN</th>*@
+            <th style="text-align:center">Tanggal Mulai</th>
+            <th style="text-align:center">Tanggal Hingga</th>
+            <th style="text-align:center">Judul</th>
+            <th style="text-align:center">Picture</th>
+            <th style="text-align:center">Isi Pengumuman</th>
+            <th style="text-align:center">Editor</th>
+
+            <th style="text-align: center; min-width: 70px">Aksi</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.no)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.NPSN)
+                    </td>*@
+                <td>
+                    @if (item.tanggal != null)
+                    {
+                        var tgl = item.tanggal.Value.ToString("dd-MMM-yyyy");
+                        @tgl
+                    }
+                </td>
+                <td>
+                    @if (item.tanggal_hingga != null)
+                    {
+                        var tgl = item.tanggal_hingga.Value.ToString("dd-MMM-yyyy");
+                        @tgl
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.judul)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.picture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isi)
+                </td>
+                <td>
+                    @{
+                        var editor = string.Empty;
+                        if (item.editor != null) { editor = item.editor; } else { editor = item.creator; }
+                        @editor;
+                    }
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Berlaku_Sampai)
+                    </td>*@
+                <td style="text-align:center">
+                    @Html.ActionLink(" ", "Details", new { id = item.id_pengumuman }, new { @class = "fas fa-search" })
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.Nomer_Lisensi })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]],
+
+
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+
+        $("#linkBar").html('<ol class="breadcrumb float-sm-right"><li class="breadcrumb-item"><a href="../HomeSKL">Home</a></li><li class="breadcrumb-item active">All Data</li></ol >');
+        $("#dashbordMain").html("Data Pengumuman");
+        ADMenuSekolah('mnuPengumumanSKL');
+    });
+
+</script>

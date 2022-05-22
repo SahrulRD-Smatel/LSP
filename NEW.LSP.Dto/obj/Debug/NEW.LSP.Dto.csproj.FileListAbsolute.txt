@@ -1,0 +1,32 @@
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.pdb
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\MySql.Data.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CoreCompileInputs.cache
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CopyComplete
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.dll
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.pdb
+C:\Users\andri\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.AssemblyReference.cache
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.pdb
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\MySql.Data.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csprojAssemblyReference.cache
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CoreCompileInputs.cache
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CopyComplete
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.dll
+D:\Belajar Program\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.pdb
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\DBHelper.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\MySql.Data.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csprojAssemblyReference.cache
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CoreCompileInputs.cache
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CopyComplete
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.dll
+C:\Users\dani\source\repos\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\bin\Debug\NEW.LSP.Dto.pdb
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.AssemblyReference.cache
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CoreCompileInputs.cache
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.csproj.CopyComplete
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.dll
+D:\dhani\NEW.LSP.UI\NEW.LSP.Dto\obj\Debug\NEW.LSP.Dto.pdb
